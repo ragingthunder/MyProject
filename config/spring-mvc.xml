@@ -50,12 +50,12 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<!-- 自动扫描entity目录, 省掉Configuration.xml里的手工配置 -->
-		<property name="typeAliasesPackage" value="com.test.entity" />
+		<property name="typeAliasesPackage" value="com.tongxing.portal.entity" />
 	</bean>
 	
 	<!-- 扫描basePackage下所有以@MyBatisRepository标识的 接口-->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.test.dao" />
+		<property name="basePackage" value="com.tongxing.portal.dao" />
 		<property name="annotationClass" value="com.tongxing.modules.mybatis.MyBatisRepository"/>
 	</bean>
 
